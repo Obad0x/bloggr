@@ -51,9 +51,10 @@ a.upload{
 
 /* main */
 
-main{
+main#main{
     height: 110vh;
- background-image: url('../public/mainbg.jpg');
+    background-color: #000;
+background: url('/public/main.jpg');
   
 }
 
@@ -72,12 +73,12 @@ main{
 }
 
 label{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 20px 40px;
   
 }
 input{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
    height: 30px;
    width: 300px;
    border: 1px solid #000;
