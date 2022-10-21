@@ -91,3 +91,29 @@ button.btn{
     border-radius: 15px;
     background: #5F9EA0;
 }
+
+/* view engines testing  */
+h3#latest{
+    padding: 10px 30px;
+    font-size: 48px;
+   font-family:  'Bebas Neue', cursive;
+}
+
+div#pages{
+    padding: 30px 40px;
+}
+
+div#title{
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+div#cat{
+
+    font-family: 'Coming Soon', cursive;
+}
+div#snippet{
+
+    font-family: 'Open Sans', sans-serif;
+}
+
