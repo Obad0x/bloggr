@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+   <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+ 
+   
+    <header>  <nav>
+        <div   id= "nav-center">
+      
+        <div>
+            <div><h3 id="brand-name">NodeCourse</h3></div>
+        </div>
+        <div id="nav-items"> 
+           <ul >
+            <a id="nav-links" href='/'>Home</a>
+            <a id="nav-links" href='/about' >about</a>
+            <a id="nav-links" href='/Contact'>Contact</a>
+
+           </ul>
+        </div>
+        <div> <a id="nav-links" class="upload" href='/blog/create'><img src="/cloud-computing.png"></a> 
+        </div>
+    </div>
+       
+    </nav></header>
+    
+
+   <main id="new">
+        <div id="spacing">
+            <h3 id="heading">Create A new Blog</h3>
+
+            <form>
+                <label  class="blog-form" for="blog-title"> Blog Title</label>
+                <br> 
+                
+                
+                <input id="blog-title" type="text" required>
+
+                
+
+
+                <br>   <label class="blog-form" for="blog-snippet"> Blog Snippet</label> <br> 
+                <input id="blog-snippet" type="text" required><br>
+              <br>
+                <label class="blog-form" for="blog-content"> Blog Description</label><br>
+                <input  id="blog-content" type="text" required>
+                <br>    
+                <br>   <label for="category"> Category</label> <br> 
+              <select id="category">
+                <option>Tech</option> 
+                <option>LifeStyle</option>  
+                <option>Travel</option>  
+              </select>
+            <br>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+        </main>
+
+        <% const home = 26;  %>
+</body>
+</html>
