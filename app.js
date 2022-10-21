@@ -4,22 +4,17 @@ const _ = require('lodash');
 const app = express();
 
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 
 app.listen(3000);
 
-app.use((req, res, next)=>{
-    console.log('Request Sent Successfuly...')
-    console.log('method', req.method)
-    console.log('url', req.url)
-    console.log('host', req.hostname)
-    console.log('path', req.path)
-    console.log('status', res.statusCode)
-    next();
-})
+
+app.use(express.static('public'))
 
 
-app.use(express.static('public', next))
+
+
 
 
 app.get('/', (req, res)=>{
@@ -40,7 +35,7 @@ app.get('/home', (req, res)=>{
     res.statusCode = 301 ;
 })
 app.use((req, res)=>{
-    res.status(404).sendFile('./views/404.ejs', {root: __dirname})
+    res.status(404).render('404')
 })
 
 

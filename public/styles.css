@@ -54,8 +54,9 @@ a.upload{
 main#main{
     height: 110vh;
     background-color: #000;
-background: url('/public/main.jpg');
-  
+    background: url('/main.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 

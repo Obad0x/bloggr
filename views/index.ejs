@@ -1,43 +1,57 @@
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/styles.css">
-    
-</head>
-<body>
-   
-   
-    <header>  <nav>
-        <div   id= "nav-center">
-      
-        <div>
-            <div><h3 id="brand-name">NodeCourse</h3></div>
-        </div>
-        <div id="nav-items"> 
-           <ul >
-            <a id="nav-links" href='/'>Home</a>
-            <a id="nav-links" href='/about' >about</a>
-            <a id="nav-links" href='/Contact'>Contact</a>
-
-           </ul>
-        </div>
-        <div> <a id="nav-links" class="upload" href='/blog/create'><img src="/cloud-computing.png"></a> 
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="/styles.css">
+        
+    </head>
+    <body>
        
-    </nav></header>
+       
+        <header>  <nav>
+            <div   id= "nav-center">
+          
+            <div>
+                <div><h3 id="brand-name">NodeCourse</h3></div>
+            </div>
+            <div id="nav-items"> 
+               <ul >
+                <a id="nav-links" href='/'>Home</a>
+                <a id="nav-links" href='/about' >about</a>
+                <a id="nav-links" href='/Contact'>Contact</a>
+    
+               </ul>
+            </div>
+            <div> <a id="nav-links" class="upload" href='/blog/create'><img src="/cloud-computing.png"></a> 
+            </div>
+        </div>
+           
+        </nav></header>
+      
+    
+        <main id="main">
+           
+        </main>
 
-    <main id="main">
-
-    </main>
-  
-
-
-
-   
-</body>
-</html>
+        <section>
+            <div id="pages">         <div id="title">
+                <%= title %>
+            </div>
+                    <div id="title">
+                <%= Category %>
+            </div>
+                    <div id="title">
+                <%= snippet %>
+            </div>
+        </div> 
+        </section>
+      
+    
+ 
+    
+       
+    </body>
+    </html>
