@@ -3,7 +3,7 @@ const _ = require('lodash');
 
 const app = express();
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
 
 app.listen(3000);
@@ -19,7 +19,8 @@ app.use((req, res, next)=>{
 })
 
 
-app.use(express.static('public'))
+app.use(express.static('public', next))
+
 
 app.get('/', (req, res)=>{
     res.render('index', 
