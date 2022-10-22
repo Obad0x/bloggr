@@ -15,10 +15,10 @@
                     <div id="blog-display">
                         
             <% if(blogs.length>0) {%> 
-                <% blogs.forEach(blog =>{ %> 
+                <% blogs.forEach(blogs =>{ %> 
                     <div id="blog-container">
-                        <h3 id="blog-title"><%= blog.title%></h3>
-                        <p id="blog-snippet"><%= blog.snippet%></p>
+                        <h3 id="blog-title"><%= blogs.title%></h3>
+                        <p id="blog-snippet"><%= blogs.snippet%></p>
                     </div>
                     <%})  %> 
             <%  }else {%> 
@@ -28,11 +28,9 @@
                 <% } %> 
            
 
+
      
       
-    
- 
-    
                
             </div>
             </section>

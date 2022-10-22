@@ -1,15 +1,21 @@
 const express = require('express');
+const { result } = require('lodash');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const app = express();
-const uri = 'mongodb+srv://sitadabo:engnrobad@bloggr.6qgvbcc.mongodb.net/?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://engnrobad:bloggr@bloggr.6qgvbcc.mongodb.net/Bloggr?retryWrites=true&w=majority'
+
+
+
+mongoose.connect(uri, {UseNewURLParser : true, UseUnifiedTopology : true})
+.then(()=>  console.log('hello'))
+.catch((err)=> console.log(err));
+app.listen(3000)
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 
-
-app.listen(3000);
 
 
 app.use(express.static('public'))
