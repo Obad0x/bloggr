@@ -1,10 +1,12 @@
 const express = require('express');
 const _ = require('lodash');
-
+const mongoose = require('mongoose');
 const app = express();
+const uri = 'mongodb+srv://sitadabo:engnrobad@bloggr.6qgvbcc.mongodb.net/?retryWrites=true&w=majority'
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
+
 
 
 app.listen(3000);
