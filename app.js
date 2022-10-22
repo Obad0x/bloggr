@@ -1,12 +1,17 @@
 const express = require('express');
 const _ = require('lodash');
+const mongoose = require('mongoose')
 
 const app = express();
 
+const uri = 'mongodb+srv://sitadabo:bloogrdatabase@cluster0.liywdmt.mongodb.net/?retryWrites=true&w=majority'
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-
+mongoose.connect(uri)
+.then((result)=>{
+    console.log(result);
+})
 app.listen(3000);
 
 
