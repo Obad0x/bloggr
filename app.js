@@ -15,19 +15,18 @@ app.use(express.static('public'))
 
 
 
-
-
 app.get('/', (req, res)=>{
-    res.render('index', 
-    {
-            title : ' how to get Started IN  tech',
-            Category : 'tech',
-            snippet : '  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, rem a officia ex dolor reiciendis.'
-    })
+    const blogs =[
+        {title:'Blog1 ', snippet: 'ths is blog 1 snippet'}
+        ,{title:'Blog2', snippet: 'this is blog 2 snippet'}
+        ,{title:'Blog3', snippet: 'this is blog 3 snippet'}
+    ]
+    res.render('index', {title : 'Home', blogs}
+   )
   
 })
 app.get('/blog/create', (req, res)=>{
-   res.render('newblog')
+   res.render('newblog', {title : 'Create a New Blog'})
 
 })
 app.get('/home', (req, res)=>{
@@ -35,7 +34,7 @@ app.get('/home', (req, res)=>{
     res.statusCode = 301 ;
 })
 app.use((req, res)=>{
-    res.status(404).render('404')
+    res.status(404).render('404',{title : 'Forbidden'})
 })
 
 
