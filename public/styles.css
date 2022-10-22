@@ -69,7 +69,7 @@ main#main{
 
 
 #spacing{
-    padding: 200px 300px;
+    padding: 100px 300px;
     margin-left: 10em;
 }
 
@@ -91,6 +91,12 @@ button.btn{
     border-radius: 15px;
     background: #5F9EA0;
 }
+button.btn:hover{
+   
+    background: none;
+    border: 1px solid #5F9EA0;
+    cursor: pointer;
+}
 
 /* view engines testing  */
 h3#latest{
@@ -99,21 +105,40 @@ h3#latest{
    font-family:  'Bebas Neue', cursive;
 }
 
-div#pages{
+
+
+
+
+
+
+#brand{
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+#blog-display{
     padding: 30px 40px;
 }
+#blog-title{
 
-div#title{
+    font-family: 'Open Sans', sans-serif; 
 
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
 }
-div#cat{
+#blog-container{
+    padding: 20px ;
+}
 
+#blog-snippet{
     font-family: 'Coming Soon', cursive;
 }
-div#snippet{
 
-    font-family: 'Open Sans', sans-serif;
+#footer{
+    margin-left: 35em;
+    font-family: 'Lato', sans-serif;
 }
-
+#blog-content{
+    border: 2px solid #000;
+    width: 25em;
+    height: 15em;
+}
