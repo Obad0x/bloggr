@@ -8,9 +8,13 @@ const uri = 'mongodb+srv://engnrobad:bloggr@bloggr.6qgvbcc.mongodb.net/Bloggr?re
 
 
 mongoose.connect(uri, {UseNewURLParser : true, UseUnifiedTopology : true})
-.then(()=>  console.log('hello'))
+.then(()=>  app.listen(3000)
+
+
+
+)
 .catch((err)=> console.log(err));
-app.listen(3000)
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -20,7 +24,16 @@ app.set('views', 'views');
 
 app.use(express.static('public'))
 
+// Sand Box Routes
 
+app.get('/blog-create', (req, res)=>{
+    const obad =[
+        {title:'Blog1 ', snippet: 'ths is blog 1 snippet'}
+        ,{title:'Blog2', snippet: 'this is blog 2 snippet'}
+        ,{title:'Blog3', snippet: 'this is blog 3 snippet'}
+    ]
+   
+})
 
 
 app.get('/', (req, res)=>{
