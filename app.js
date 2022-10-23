@@ -1,9 +1,11 @@
 const express = require('express');
-const { result } = require('lodash');
+const { result, constant } = require('lodash');
 const _ = require('lodash');
 const mongoose = require('mongoose');
+const { default: Blog } = require('./models/Blog');
 const app = express();
-const uri = 'mongodb+srv://engnrobad:bloggr@bloggr.6qgvbcc.mongodb.net/Bloggr?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://engnrobad:bloggr@bloggr.6qgvbcc.mongodb.net/Bloggr?retryWrites=true&w=majority';
+const Blogmodel = require('./models/Blog');
 
 
 
@@ -24,15 +26,20 @@ app.set('views', 'views');
 
 app.use(express.static('public'))
 
+
+
 // Sand Box Routes
 
 app.get('/blog-create', (req, res)=>{
-    const obad =[
-        {title:'Blog1 ', snippet: 'ths is blog 1 snippet'}
-        ,{title:'Blog2', snippet: 'this is blog 2 snippet'}
-        ,{title:'Blog3', snippet: 'this is blog 3 snippet'}
-    ]
-   
+    const Blog = new Blogmodel(
+        title = 'my new blog',
+        snippet = ' about my new blog',
+        body = ' the body of my new blog'
+    );
+   blog.save()
+   .then((result)=>{
+    res.send(result)
+   });
 })
 
 
