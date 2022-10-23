@@ -31,13 +31,12 @@ app.use(express.static('public'))
 
 
 app.get('/', (req, res)=>{
-    const blogs =[
-        {title:'Blog1 ', snippet: 'ths is blog 1 snippet'}
-        ,{title:'Blog2', snippet: 'this is blog 2 snippet'}
-        ,{title:'Blog3', snippet: 'this is blog 3 snippet'}
-    ]
-    res.render('index', {title : 'Home', blogs}
-   )
+ 
+    Blog.find()
+    .then((result)=>{
+        res.render('index', {title : 'Home', blogs : result})
+    })
+    .catch((err)=> console.log(err));
   
 })
 app.get('/blog/create', (req, res)=>{
