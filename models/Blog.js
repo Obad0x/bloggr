@@ -1,32 +1,25 @@
+const mongo = require('mongoose');
 
-// required Files
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema()
+const Schema = mongo.Schema;
 
-// Creating A New Schema
-const blogSchema = new Schema(
-    {
-        title : {
-            type : String,
-            required : true, 
 
-        }, 
-        snippet : {
-            type : String, 
-            required : true
-        }, 
-        body :{
-            type : String, 
-            required : true
-        }
+const blogSchema = new Schema({
+
+    title : {
+        type : String, 
+        required : true
+    }, 
+    snippet : {
+                type : String,
+                required : true
+    }, 
+    body : {
+        type : String, 
+        required : true
     }
-);
+}, {timestamps : true} );
 
 
-// Creating a new model off the Schema ^
-//                                     |
+const Blog = mongo.model('Blog', blogSchema);
 
-const Blog = mongoose.model('Blog', blogSchema);
-
-
-module.exports.default = Blog;
+module.exports = Blog;

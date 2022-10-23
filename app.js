@@ -2,19 +2,15 @@ const express = require('express');
 const { result, constant } = require('lodash');
 const _ = require('lodash');
 const mongoose = require('mongoose');
-const { default: Blog } = require('./models/Blog');
 const app = express();
 const uri = 'mongodb+srv://engnrobad:bloggr@bloggr.6qgvbcc.mongodb.net/Bloggr?retryWrites=true&w=majority';
-const Blogmodel = require('./models/Blog');
+const Blog = require('./models/blog');
+
 
 
 
 mongoose.connect(uri, {UseNewURLParser : true, UseUnifiedTopology : true})
-.then(()=>  app.listen(3000)
-
-
-
-)
+.then(()=>  app.listen(3000), console.log('Db Connected Successfully'))
 .catch((err)=> console.log(err));
 
 
@@ -28,19 +24,10 @@ app.use(express.static('public'))
 
 
 
-// Sand Box Routes
 
-app.get('/blog-create', (req, res)=>{
-    const Blog = new Blogmodel(
-        title = 'my new blog',
-        snippet = ' about my new blog',
-        body = ' the body of my new blog'
-    );
-   blog.save()
-   .then((result)=>{
-    res.send(result)
-   });
-})
+
+
+
 
 
 app.get('/', (req, res)=>{
@@ -61,8 +48,39 @@ app.get('/home', (req, res)=>{
     res.redirect('/');
     res.statusCode = 301 ;
 })
+
+// Sand Box routes
+
+app.get('/blog-create', (req, res)=>{
+    const blog = new Blog({
+        title : 'This iS My New Blog3', 
+        snippet : 'This is the snippet for Blog 3', 
+        body: ' This is the body for Blog3'
+
+    })
+    blog.save()
+    .then((result)=>{
+        res.send(result)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+    
+})
+
+app.get('/all-blogs', (req, res)=>{
+    Blog.find()
+    .then((result)=>{
+        res.send(result);
+    })
+    .catch((err)=> console.log(err))
+    ;
+})
+
+
+
+
 app.use((req, res)=>{
     res.status(404).render('404',{title : 'Forbidden'})
 })
-
 
