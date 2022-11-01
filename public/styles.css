@@ -142,3 +142,14 @@ h3#latest{
     width: 25em;
     height: 15em;
 }
+
+
+a.blog-link{
+    text-decoration: none;
+    color: #000;
+}
+
+
+#content-spacing{
+    padding: 10px 10px;
+}

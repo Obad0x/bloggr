@@ -11,13 +11,13 @@
         <div id="spacing">
             <h3 id="heading">Create A new Blog</h3>
 
-            <form>
+            <form action="/" method="POST">
                 <label  class="blog-form" for="blog-title"> Blog Title</label>
                 <br> 
                
                 
                 
-                <input id="blog-title" type="text" required>
+                <input name="title" id="blog-title" type="text" required>
 
                 <br>
                 
@@ -26,11 +26,11 @@
 
 
                 <br>   <label class="blog-form" for="blog-snippet"> Blog Snippet</label> <br> 
-                <input id="blog-snippet" type="text" required><br>
+                <input name="snippet" id="blog-snippet" type="text" required><br>
               <br>
               <br>
                 <label class="blog-form" for="blog-content"> Blog Description</label><br>
-                <textarea  id="blog-content"  required></textarea>
+                <textarea name="body" id="blog-content"  required></textarea>
                 <br>    
                
             
