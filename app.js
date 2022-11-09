@@ -82,7 +82,7 @@ app.post('/', (req, res)=>{
           res.json({redirect : '/'})
       })
       .catch((err)=>{
-          console.log(err)
+          console.log(err);
       });
   
   })
